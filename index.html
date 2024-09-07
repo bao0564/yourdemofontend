@@ -116,7 +116,7 @@
                                     </a>
 								</div>
 								<ul class="navbar_menu">
-									<li><a class="link" href="Index.html">Home</a></li>
+									<li><a class="link" href="index.html">Home</a></li>
 									<li><a class="link" href="elseIndex.html">Sale</a></li>
 									<li><a class="link" href="elseIndex.html">New</a></li>
 									<li><a class="link" href="elseIndex.html">Hot</a></li>
@@ -143,29 +143,43 @@
 					</div>
 				</div>
 			</div><!-- form Thông báo -->
-			<div id="form-login" class="form-login" style="display: block;">
+			<div id="form-popup" class="form-login">
 				<div class="fa-login" id="fa-login">
 					<div class="creen-login">
 						<div class="box-login box">
-							<span class="close-login" onclick="closeFL()">✕</span>
+							<span class="close-login" id="close-login">✕</span>
 							<div class="login-left" style="width: 100%;background-color: #2f3640;">
 								<form action="" id="dangnhap">
 									<div class="title">
 										<p class="login">Hi! Xin Chào Nhà tuyển dụng</p>
 									</div>
 									<div class="sm-title">
-										Chào mừng đến với phần trang web demo font-end của tôi
+										<h6>Chào mừng đến với phần trang web demo font-end </h6>
 									</div>
 									<h4 class="fljct" style="margin: 10px;color:#fff;">Vì Là demo nên một số tính năng sử dụng bị hạn chế  </h4>
-                                    <h5 class="fljct" style="margin: 10px;color:#fff;">Hiện tại vì một số kỹ năng còn yếu kém nên phần back-end hiện tại không thể public</h5>
-                                    <h5 class="fljct" style="margin: 10px;color:#fff;">Xin cám ơn</h5>
-                                    <p  class="fljct" style="margin: 10px;color:#fff;">Truy cập trang admin <a href="admin.html">Tại Đây!</a></p>
+                                    <h5 class="fljct" style="margin: 10px;color:#fff;">Hiện tại vì một số kỹ năng còn yếu kém nên phần back-end hiện tại không được public</h5>
+                                    <h5 class="fljct" style="margin: 10px;color:#fff;">Xin cảm ơn</h5>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+            <script>
+                window.onload = function() {
+                    if (!localStorage.getItem("welcomeShown")) {
+                        // Hiển thị thông báo chào mừng
+                        document.getElementById("form-popup").style.display = "block";
+                        // Lưu thông tin vào localStorage để ghi nhớ rằng thông báo đã được hiển thị
+                        localStorage.setItem("welcomeShown", "true");
+                    }
+
+                    // Đóng thông báo khi nhấn nút
+                    document.getElementById("close-login").onclick = function() {
+                        document.getElementById("form-popup").style.display = "none";
+                    };
+                };
+            </script>
 			<!-- form Đăng Nhập -->
 			<div id="form-login" class="form-login">
 				<div class="fa-login" id="fa-login">
@@ -310,11 +324,11 @@
                             <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Tạo Tài Khoản</a></li>
                         </ul>
 					</li>
-					<li class="menu_item"><a href="">home</a></li>
-					<li class="menu_item"><a href="">Sản Phẩm Sell</a></li>
-					<li class="menu_item"><a href="">Sản Phẩm Mới</a></li>
-					<li class="menu_item"><a href="">Sản Phẩm Hot</a></li>
-					<li class="menu_item"><a href="">Đồ Lót</a></li>
+					<li class="menu_item"><a href="index.html">home</a></li>
+					<li class="menu_item"><a href="elseIndex.html">Sản Phẩm Sell</a></li>
+					<li class="menu_item"><a href="elseIndex.html">Sản Phẩm Mới</a></li>
+					<li class="menu_item"><a href="elseIndex.html">Sản Phẩm Hot</a></li>
+					<li class="menu_item"><a href="elseIndex.html">Đồ Lót</a></li>
 					<li class="menu_item"><a href="#">Liên Hệ Với Chúng Tôi</a></li>
 					<li class="menu_item has-children">
 						<a href="#">
@@ -356,14 +370,14 @@
                     <div class="col-md-4">
                         <div class="banner_item align-items-center" style="background-image:url(images/all.png)">
                             <div class="banner_category">
-                                <a href="@Url.Action("AllProduct","Home")">ALL</a>
+                                <a href="elseIndex.html">ALL</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="banner_item align-items-center" style="background-image:url(images/dl.png)">
                             <div class="banner_category">
-                                <a href="@Url.Action("UnderProduct","Home")">PERSONAL ITEMS</a>
+                                <a href="elseIndex.html">PERSONAL ITEMS</a>
                             </div>
                         </div>
                     </div>
@@ -429,192 +443,150 @@
                                     <div class="product-item">
                                         <div class="product discount">
                                             <div class="product_image">
-                                                <img src="images/product_1.png" alt="">
+                                                <img src="img/09c7a9a9-1254-4b7e-8cd3-b20237c46260.png" alt="">
                                             </div>
                                             <div class="favorite favorite_left"></div>
-                                            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
-                                                <div class="product_price">$520.00<span>$590.00</span></div>
+                                                <h6 class="product_name"><a href="detail.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+                                                <div class="product_price">520.000<span>590.000</span></div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
                                     </div>
                                 </div>
-
-                                <!-- Slide 2 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item women">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_2.png" alt="">
+                                                <img src="img/1193f3d8-7e08-4eca-b305-3144c0298494.png" alt="">
                                             </div>
                                             <div class="favorite"></div>
-                                            <div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
-                                                <div class="product_price">$610.00</div>
+                                                <h6 class="product_name"><a href="detail.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+                                                <div class="product_price">610.000</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
                                     </div>
                                 </div>
-
-                                <!-- Slide 3 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item women">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_3.png" alt="">
+                                                <img src="img/3e802b6a-72d0-4851-96da-add7462517bd.png" alt="">
                                             </div>
                                             <div class="favorite"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
-                                                <div class="product_price">$120.00</div>
+                                                <h6 class="product_name"><a href="detail.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+                                                <div class="product_price">120.000</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
                                     </div>
                                 </div>
-
-                                <!-- Slide 4 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item accessories">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_4.png" alt="">
+                                                <img src="img/47805d5c-4a9e-4dec-91c5-b86f6f61f5b9.png" alt="">
                                             </div>
-                                            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
                                             <div class="favorite favorite_left"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+                                                <h6 class="product_name"><a href=" detail.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
                                                 <div class="product_price">$410.00</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                         
                                     </div>
                                 </div>
-
-                                <!-- Slide 5 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item women men">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_5.png" alt="">
+                                                <img src="img/544cb391-2ea9-4347-b64f-1b230613912f.png" alt="">
                                             </div>
                                             <div class="favorite"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
-                                                <div class="product_price">$180.00</div>
+                                                <h6 class="product_name"><a href=" detail.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+                                                <div class="product_price">180.000</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                         
                                     </div>
                                 </div>
-
-                                <!-- Slide 6 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item accessories">
                                         <div class="product discount">
                                             <div class="product_image">
-                                                <img src="images/product_6.png" alt="">
+                                                <img src="img/61eecf18-afab-4fdd-b549-d232cecd2910.png" alt="">
                                             </div>
                                             <div class="favorite favorite_left"></div>
-                                            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
-                                                <div class="product_price">$520.00<span>$590.00</span></div>
+                                                <h6 class="product_name"><a href="detail.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+                                                <div class="product_price">520.000<span>$590.000</span></div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                         
                                     </div>
                                 </div>
-
-                                <!-- Slide 7 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item women">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_7.png" alt="">
+                                                <img src="img/729a86f2-e2b8-4deb-be66-66d56de52465.png" alt="">
                                             </div>
                                             <div class="favorite"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
-                                                <div class="product_price">$610.00</div>
+                                                <h6 class="product_name"><a href=" detail.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+                                                <div class="product_price">610.000</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                         
                                     </div>
                                 </div>
-
-                                <!-- Slide 8 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item accessories">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_8.png" alt="">
+                                                <img src="img/8731c28c-b15d-4db3-bc52-99d18b627345.png" alt="">
                                             </div>
                                             <div class="favorite"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+                                                <h6 class="product_name"><a href=" detail.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
                                                 <div class="product_price">$120.00</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                         
                                     </div>
                                 </div>
-
-                                <!-- Slide 9 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item men">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_9.png" alt="">
+                                                <img src="img/92636382-0c74-4900-a7e4-65499d29c15d.png" alt="">
                                             </div>
-                                            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
                                             <div class="favorite favorite_left"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+                                                <h6 class="product_name"><a href=" detail.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
                                                 <div class="product_price">$410.00</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                         
                                     </div>
                                 </div>
-
-                                <!-- Slide 10 -->
-
                                 <div class="owl-item product_slider_item">
                                     <div class="product-item men">
                                         <div class="product">
                                             <div class="product_image">
-                                                <img src="images/product_10.png" alt="">
+                                                <img src="img/1193f3d8-7e08-4eca-b305-3144c0298494.png" alt="">
                                             </div>
                                             <div class="favorite"></div>
                                             <div class="product_info">
-                                                <h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
-                                                <div class="product_price">$180.00</div>
+                                                <h6 class="product_name"><a href=" detail.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+                                                <div class="product_price">180.000</div>
                                             </div>
                                         </div>
-                                        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-                                    </div>
-                                </div>
-                                <div class="owl-item product_slider_item" style="display:flex; align-items:center;justify-content:center">
-                                    <div class="" >
-                                        <a href="@Url.Action("SellProduct","Home")" style="color:#000">Xem Thêm <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                         
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Slider Navigation -->
 
                             <div class="product_slider_nav_left product_slider_nav d-flex align-items-center justify-content-center flex-column">
                                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
