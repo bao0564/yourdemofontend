@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cssAdmin.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<<<<<<< HEAD
+    <link href="/css/adminlte.min.css" rel="stylesheet" />
+    <link href="/css/all.min.css" rel="stylesheet" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/css/bootstrap4/bootstrap.bundle.min.js"></script>
+    <script src="/js/demo.js"></script>
+=======
+    <link href="css/adminlte.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="css/bootstrap4/bootstrap.bundle.min.js"></script>
+    <script src="js/demo.js"></script>
+>>>>>>> adc9c9d966a14d68a2601f5d74da7571bf0cbd01
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-0">
+        <div class="head-top">
+            <div id="header">
+                <div id="logo" class="logo">
+                    <a href="admin.html">
+                        <img src="logo/logo.png" />
+                    </a>
+                </div>
+                <div class="account">
+                    Tài khoản đăng nhập!
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-ct col-2">
+                <ul style="padding: 0;">
+                    <li><a href="admin-donhang.html"> Đơn Hàng</a></li>
+                    <li><a href="admin-sanpham.html"> Sản Phẩm</a></li>
+                    <li><a href="admin-danhmuc.html"> Danh Mục</a></li>
+                    <li><a href="#">Nhóm</a></li>
+                    <li><a href="admin-size.html">Kích cỡ</a></li>
+                    <li><a href="admin-color.html"> Màu</a></li>
+                    <li><a href="#"> Khách Hàng</a> </li>
+                    <li><a href="#"> Ads</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#" onclick="logout(event)">Đăng Xuất</a></li>
+                </ul>
+            </div>
+            <div class="menu-cp col-10">
+                
+<div class="menu-cp">
+    <div class="cp0">
+        Cập Nhật Tình Trạng Đơn hàng
+    </div>
+    <div class="h-cp1">
+        <div class="h-cp-up">
+            <div style="display:flex;align-items:center;padding-top:15px">
+                <a href="admin-donhang.html"><img style="height:20px" src="\icon\drop left.svg" /> </a>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="ODSuccessCheckbox2" class="custom-control-label">Đặt Hàng Thành công</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="ODReadlyCheckbox2" class="custom-control-label">Đang chuẩn bị hàng</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="ODTransportedCheckbox" class="custom-control-label">Đang vận chuyển</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="CompleteCheckbox" class="custom-control-label">Hoàn thành</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn-primary" />
+            </div>
+    </div>
+</div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+function logout(event) {
+event.preventDefault();
+var userConfirmed = confirm("Bạn chắc chắn muốn đăng xuất?");
+if (userConfirmed) {
+    var url = event.currentTarget.getAttribute("href");
+    window.location.href = url;
+}
+}
+</script>

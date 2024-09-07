@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cssAdmin.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<<<<<<< HEAD
+    <link href="/css/adminlte.min.css" rel="stylesheet" />
+    <link href="/css/all.min.css" rel="stylesheet" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/css/bootstrap4/bootstrap.bundle.min.js"></script>
+    <script src="/js/demo.js"></script>
+=======
+    <link href="css/adminlte.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="css/bootstrap4/bootstrap.bundle.min.js"></script>
+    <script src="js/demo.js"></script>
+>>>>>>> adc9c9d966a14d68a2601f5d74da7571bf0cbd01
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-0">
+        <div class="head-top">
+            <div id="header">
+                <div id="logo" class="logo">
+                    <a href="admin.html">
+                        <img src="logo/logo.png" />
+                    </a>
+                </div>
+                <div class="account">
+                    Tài khoản đăng nhập!
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-ct col-2">
+                <ul style="padding: 0;">
+                    <li><a href="admin-donhang.html"> Đơn Hàng</a></li>
+                    <li><a href="admin-sanpham.html"> Sản Phẩm</a></li>
+                    <li><a href="admin-danhmuc.html"> Danh Mục</a></li>
+                    <li><a href="#">Nhóm</a></li>
+                    <li><a href="admin-size.html">Kích cỡ</a></li>
+                    <li><a href="admin-color.html"> Màu</a></li>
+                    <li><a href="#"> Khách Hàng</a> </li>
+                    <li><a href="#"> Ads</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#" onclick="logout(event)">Đăng Xuất</a></li>
+                </ul>
+            </div>
+            <div class="menu-cp col-10">
+                
+<div class="cp0">
+    Danh Sách Sản Phẩm
+</div>
+<div class="h-cp1">
+    <div class="h-cp-f">
+        <div class="h-cp-up">
+            <div class="bt-c"><a href="TaoSanPham.html">Tạo sản phẩm mới</a></div>
+            <div class="bt-c"><a href="">In dữ liệu </a></div>
+            <div class="bt-c"><a href="">Xuất Excel</a></div>
+            <div class="bt-c"><a href="">Xuất PDF</a></div>
+        </div>
+        <div class="h-cp-mid">
+             <div class="mesages">
+            </div>
+            <div>
+                <input class="form-search" type="text" placeholder="Tìm Kiếm Mã Sản phẩm/ Tên sản phẩm . . .">
+            </div>
+            <table class="h-table">
+                <thead>
+                    <tr>
+                        <th >Mã SP</th>
+                        <th >Tên SP</th>
+                        <th>Ảnh đại diện </th>
+                        <th>Giá áp dụng</th>
+                        <th>Giá gốc</th>
+                        <th >Danh Mục</th>
+                        <th >Số Lượng</th>
+                        <th >Số lượng Bán</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Sản phẩm quần áo</td>
+                        <td><img src="img/09c7a9a9-1254-4b7e-8cd3-b20237c46260.png" alt=""></td>
+                        <td>205.000</td>
+                        <td>250.000</td>
+                        <td>2</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>
+                            <a href="" onclick="deletesp(event)" style="color: #000;">Xóa</a>
+                            <a href="suasanpham.html" asp-route-masp="@prd.MaSp" style="color: black;">Sửa</a>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                        <td>02</td>
+                        <td>Sản phẩm quần áo</td>
+                        <td><img src="img/1193f3d8-7e08-4eca-b305-3144c0298494.png" alt=""></td>
+                        <td>205.000</td>
+                        <td>250.000</td>
+                        <td>2</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>
+                            <a href="" onclick="deletesp(event)" style="color: #000;">Xóa</a>
+                            <a href="suasanpham.html" asp-route-masp="@prd.MaSp" style="color: black;">Sửa</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function deletesp(event) {
+        event.preventDefault();
+        var userConfirmed = confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?");
+        if (userConfirmed) {
+            var url = event.currentTarget.getAttribute("href");
+            window.location.href = url;
+        }
+    }
+</script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+function logout(event) {
+event.preventDefault();
+var userConfirmed = confirm("Bạn chắc chắn muốn đăng xuất?");
+if (userConfirmed) {
+    var url = event.currentTarget.getAttribute("href");
+    window.location.href = url;
+}
+}
+</script>

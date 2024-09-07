@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cssAdmin.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="css/adminlte.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="css/bootstrap4/bootstrap.bundle.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-0">
+        <div class="head-top">
+            <div id="header">
+                <div id="logo" class="logo">
+                    <a href="admin.html">
+                        <img src="logo/logo.png" />
+                    </a>
+                </div>
+                <div class="account">
+                    Tài khoản đăng nhập!
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-ct col-2">
+                <ul style="padding: 0;">
+                    <li><a href="admin-donhang.html"> Đơn Hàng</a></li>
+                    <li><a href="admin-sanpham.html"> Sản Phẩm</a></li>
+                    <li><a href="admin-danhmuc.html"> Danh Mục</a></li>
+                    <li><a href="#">Nhóm</a></li>
+                    <li><a href="admin-size.html">Kích cỡ</a></li>
+                    <li><a href="admin-color.html"> Màu</a></li>
+                    <li><a href="#"> Khách Hàng</a> </li>
+                    <li><a href="#"> Ads</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#" onclick="logout(event)">Đăng Xuất</a></li>
+                </ul>
+            </div>
+            <div class="menu-cp col-10">
+                    
+<div class="col-md-12">
+    <div class="cp0">
+        Sửa Sản Phẩm 
+    </div>
+    <div class="card">
+        <div class="card-header p-2">
+            <ul class="nav nav-pills">
+                <a href="admin-sanpham.html"><img style="height:20px" src="\icon\drop left.svg" /> </a>
+                <li class="nav-item"><a class="nav-link active" href="#page1" data-toggle="tab">Thông Tin Chính</a></li>
+                <li class="nav-item"><a class="nav-link" href="#page2" data-toggle="tab">Thông Tin Ảnh</a></li>
+                <li class="nav-item"><a class="nav-link" href="#page3" data-toggle="tab">Thông Tin Khác</a></li>
+            </ul>
+        </div><!-- /.card-header -->
+            <input type="hidden" asp-for="MaSp" />
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="active tab-pane" id="page1">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="control-label">Danh Mục</label>
+                                <select asp-for="MaDm" class="form-control" asp-items="ViewBag.MaDm">
+                                    <option value="">1</option>
+                                </select>
+                                <span asp-validation-for="MaDm" class="text-danger"></span>
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="TenSp" class="control-label">Tên Sản Phẩm</label>
+                                <input asp-for="TenSp" type="text" placeholder="Sản Phẩm quần áo" />
+                            </div>
+                            <div class="col-6">
+                                <label class="control-label">Nhóm</label>
+                                <input asp-for="TenSp" type="text" placeholder="Nam" />
+                            </div>
+                            <div class="col-6">
+                                <label class="control-label">Số Lượng</label>
+                                <input asp-for="SoLuongSp" type="text" placeholder="1" />
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="PriceMax" class="control-label"></label>
+                                <input asp-for="PriceMax" id="GiaMax" type="text" placeholder="250,000" class="form-control" oninput="calculateGiaMin()" />
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="GiamGia" class="control-label"></label>
+                                <input asp-for="GiamGia" id="GiamGia" type="text" placeholder="10" class="form-control" value="0" oninput="calculateGiaMin()" />
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="PriceMin" class="control-label"></label>
+                                <input asp-for="PriceMin" id="GiaMin" type="text" placeholder="200.000" class="form-control" readonly />
+                            </div>
+                            <div class="col-12">
+                                <label>Chọn Size:</label>
+                                <div style="display:flex">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="SelectedSizes" value="@size.SizeId"
+                                            <label class="form-check-label">S</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="SelectedSizes" value="@size.SizeId"
+                                            <label class="form-check-label">L</label>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label>Chọn Màu Sắc:</label>
+                                <div style="display:flex">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="SelectedColors" value="@color.ColorId"
+                                            <label class="form-check-label" style="white-space:nowrap" for="color-@color.ColorId">Đen</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="SelectedColors" value="@color.ColorId"
+                                            <label class="form-check-label" style="white-space:nowrap" for="color-@color.ColorId">Trắng</label>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="control-label">Mô Tả </label>
+                                <input asp-for="MotaSp" type="text" placeholder="Mô tả sản phẩm..." />
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <label for="customCheckbox2" class="custom-control-label">Hiển thị</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <label for="IsHotCheckbox2" class="custom-control-label">Hot</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <label for="IsFeatureCheckbox" class="custom-control-label">Nổi bật</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <label for="IsSaleCheckbox" class="custom-control-label">Khuyến mãi</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane row" id="page2">
+                        <div class="row">
+                            <div style="color:red;display:flex;align-items:center">Chọn ảnh mới để thay thế:</div>
+                            <div>
+                                    <img style="height:100px" src="/img/1258e3b4-af79-4f31-bc59-c594d8d23edf.png" />
+                            </div>
+                            <div class="col-12" style="display:flex; justify-content:space-between">
+                                <input type="file" id="fileUpload" multiple />
+                                <div class="flct col-4">
+                                    <button type="button" id="btnUpload" class="btn btn-primary">Tải lên</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-bordered" id="imagesTable">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Ảnh</th>
+                                        <th>Url</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Danh sách ảnh sẽ được thêm vào đây -->
+                                </tbody>
+                            </table>
+                            <input type="hidden" id="ddpicId" value="0" />
+                            <input type="hidden" id="Imgs" name="Imgs" />
+                        </div>
+                        <div style="display:flex">
+                            <div class="col-5" style="display:flex">
+                                <div style="color:red;display:flex;align-items:center">Vui lòng chọn ảnh mới để thay thế:</div>
+                                <img style="height:100px" src="/img/1193f3d8-7e08-4eca-b305-3144c0298494.png" />
+                            </div>
+                            <div class="col-6">
+                                <label class="control-label">Ảnh đại diện</label>
+                                <input asp-for="AnhSp" type="file" class="form-control" name="AnhSpFile" />
+                                <span asp-validation-for="AnhSp" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-cp-dow">
+                <div class="bt-ar">
+                    <input type="submit" value="Lưu Thông Tin Sản Phẩm" class="btn-primary" />
+                </div>
+            </div>
+        </div>    
+    <!-- /.card -->
+</div>
+    <script>
+        $(document).ready(function () {
+            $('#btnUpload').click(function () {
+                var files = $('#fileUpload').prop('files');
+                var formData = new FormData();
+
+                var picId = parseInt($('#ddpicId').val());
+                var imgUrls = [];
+
+                for (var i = 0; i < files.length; i++) {
+                    formData.append('files', files[i]);
+                }
+
+                $.ajax({
+                    url: '@Url.Action("UploadImg", "SanPham")',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        if (response.success) {
+                            response.filePaths.forEach(function (filePath) {
+                                picId++;
+                                $('#imagesTable tbody').append(
+                                    '<tr id="trow_' + picId + '"> <td>' + picId + '</td> <td><img src="' + filePath + '" width="100"></td> <td>' + filePath + '</td> <td><a href="#" data-id="' + picId + '" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td></tr>');
+                                imgUrls.push(filePath);
+                            });
+                            $('#ddpicId').val(picId);
+                            $('#Imgs').val(imgUrls.join(';'));
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Lỗi khi tải ảnh lên:', error);
+                    }
+                });
+            });
+
+            // Remove image
+            $('body').on('click', '.btnXoaAnh', function () {
+                var conf = confirm('Bạn có muốn xóa ảnh này không?');
+                if (conf === true) {
+                    var _id = $(this).data('id');
+                    $('#trow_' + _id).fadeTo('fast', 0.5, function () {
+                        $(this).slideUp('fast', function () {
+                            $(this).remove();
+                            updateImgsInput();
+                        });
+                    });
+                }
+            });
+
+            function updateImgsInput() {
+                var imgUrls = [];
+                $('#imagesTable tbody tr').each(function () {
+                    var imgSrc = $(this).find('td:eq(2)').text();
+                    imgUrls.push(imgSrc);
+                });
+                $('#Imgs').val(imgUrls.join(';'));
+            }
+        });
+
+        function calculateGiaMin() {
+            var giaMax = parseFloat(document.getElementById('GiaMax').value) || 0;
+            var giamGia = parseFloat(document.getElementById('GiamGia').value) || 0;
+            var giaMin = giaMax - (giaMax * giamGia / 100);
+            document.getElementById('GiaMin').value = giaMin.toFixed(2); // Giữ lại 2 chữ số thập phân
+        }
+    </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+function logout(event) {
+event.preventDefault();
+var userConfirmed = confirm("Bạn chắc chắn muốn đăng xuất?");
+if (userConfirmed) {
+    var url = event.currentTarget.getAttribute("href");
+    window.location.href = url;
+}
+}
+</script>
