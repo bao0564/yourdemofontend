@@ -27,6 +27,7 @@
 	.cate .product_name a {
 		font-size: 14px;
 	}
+
 }
 
 /************
@@ -95,6 +96,10 @@
 
 @media only screen and (max-width: 1280px)
 {
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 20%;
+	}
 	.cate .product-item{
 		width:25%;
 	}
@@ -129,12 +134,12 @@
 
 @media only screen and (max-width: 1199px)
 {
-	.cate {
-		margin:150px 20px 0 !important;
+	.product_section_container {
+		margin-top: 150px;
 	}
 	.cate .product-item .favorite {
 		top: 0px;
-		left: 20px;
+		left: 15%;
 	}
 	.cate .product_bubble_right {
 		justify-content: center;
@@ -149,7 +154,10 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 10%;
+	}
 }
 
 /************
@@ -158,14 +166,39 @@
 
 @media only screen and (max-width: 991px)
 {
+
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 16%;
+	}
+	.product_sorting .sidebar_section-box1 {
+		display: block;
+	}
 	.sidebar_section-1{
 		display: none;
 	}
-	.sidebar_section-2{
-		display:block;
+	.sidebar_section-2 {
+		display: -webkit-box;
+		overflow-y: hidden;
+		overflow-x: auto;
 	}
-	.sidebar_title h5{
-		margin:0;
+	.sidebar_section-2 .lst-cate li{
+		border:1px solid #2f3640;
+		border-radius:10px;
+		margin:0 10px;
+	}
+	.sidebar_section-2 .lst-cate li a{
+		padding:5px 20px;
+		white-space:nowrap;
+	}
+	.sidebar_section-box {
+		display: none;
+	}
+	.product_sorting .sidebar_section-box2 {
+		display: block;
+	}
+	.sidebar_title h5 {
+		margin: 0;
 	}
 	.product-grid{
 		margin-top:25px;
@@ -194,7 +227,7 @@
 	}
 	.product_section_container
 	{
-		margin-top: 100px;
+		margin-top: 150px;
 	}
 	.sidebar
 	{
@@ -261,7 +294,17 @@
 
 @media only screen and (max-width: 959px)
 {
-	
+
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 15%;
+	}
+	.product_sorting li span:nth-child(2) {
+		margin-left: 0px;
+	}
+	.sidebar_section-box{
+		display:none;
+	}
 }
 
 /************
@@ -270,11 +313,16 @@
 
 @media only screen and (max-width: 880px)
 {
-	.hamburger_container{
-		margin:0;
+
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 10%;
 	}
-	.cate {
-		margin: 110px 20px 0 !important;
+	.product_section_container{
+		margin-top:130px;
+	}
+	.hamburger_container {
+		margin: 0;
 	}
 }
 
@@ -284,7 +332,9 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+	.product_sorting .show-box{
+		display:none;
+	}
 }
 
 /************
@@ -293,6 +343,15 @@
 
 @media only screen and (max-width: 767px)
 {
+
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 5%;
+	}
+
+	.product_sorting li span {
+		font-size: 12px;
+	}
 	h1{font-size: 36px;}
 	h2{font-size: 24px;}
 	h6{font-size: 12px;}
@@ -357,6 +416,16 @@
 
 @media only screen and (max-width: 575px)
 {
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 0;
+	}
+	.product_section_container {
+		margin-top: 100px;
+	}
+	.product_sorting .type_sorting_text_box {
+		display: none;
+	}
 	.hamburger_menu
 	{
 		right: -100%;
@@ -401,7 +470,9 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+	.product_sorting > li{
+		padding-left:5px;
+	}
 }
 
 /************
@@ -420,6 +491,10 @@
 @media only screen and (max-width: 479px)
 {
 
+	.cate .product-item .favorite {
+		top: 0px;
+		left: 5%;
+	}
 	.cate .product-item {
 		width:50%;
 	}

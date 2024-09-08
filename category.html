@@ -61,10 +61,10 @@
 						<div class="top_nav_right">
 							<ul class="top_nav_menu">
 								<li class="account">
-									<a href="#">
-										Tài Khoản
-										<i class="fa fa-angle-down"></i>
-									</a>
+									<a href="acount.html">
+                                        Tài Khoản
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
 									<ul class="account_selection">
 										<li>
 											<a href="@Url.Action("Login","Access")"><i href="@Url.Action("Login","Access")" class="fa fa-sign-in" aria-hidden="true"></i>Đăng Nhập</a>
@@ -316,7 +316,7 @@
 			</div>
 		</div>
 
-		<div class="product_section_container cate" style="margin-left: 100px;margin-right:100px">
+		<div class="product_section_container cate">
 			<div class="row">
 				<div class="col product_section clearfix">
 
@@ -343,30 +343,15 @@
 								<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Quần Dài</a></li>
 							</ul>
 						</div>
-						<div class="sidebar_section-2 menu_item has-children">
-							<div style="display:flex;align-items:center">
-								<h5>Loại Sản Phẩm</h5>
-								<i style="margin:0 10px" class="fa fa-angle-down"></i>
+						<div class="sidebar_section-2 ">
+							<div class="flct" style="margin:10px 0">
+                                <ul class="lst-cate" style="display:flex">
+									<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Áo</a></li>
+									<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Áo Khoác</a></li>
+									<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Quần </a></li>
+									<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Quần Dài</a></li>
+                                </ul>
 							</div>
-							<ul class="menu_selection">
-								<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Áo</a></li>
-								<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Áo Khoác</a></li>
-								<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Quần </a></li>
-								<li><a asp-controller ="Home" asp-action="ProductTipe" asp-route-madm="@prd.MaDm">Quần Dài</a></li>
-							</ul>
-						</div>
-						<!-- Price Range Filtering -->
-						<div class="sidebar_section ">
-							<div class="sidebar_title">
-								<h5>Chọn Giá Phù Hợp</h5>
-							</div>
-							<p>
-								<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-								<input type="hidden" id="FromAmount" />
-								<input type="hidden" id="ToAmount" />
-							</p>
-							<div id="slider-range"></div>
-							<div class="filter_button"><span>Chọn</span></div>
 						</div>
 						<!-- Sizes -->
 						<div class="sidebar_section sidebar_section-1">
@@ -377,10 +362,10 @@
 								<li>
 									<input type="checkbox" /><span style="margin-left:10px">M</span>
 								</li>
-								<li>
+								<li >
 									<input type="checkbox" /><span style="margin-left:10px">L</span>
 								</li>
-								<li>
+								<li >
 									<input type="checkbox" /><span style="margin-left:10px">XL</span>
 								</li>
 							</ul>
@@ -388,30 +373,13 @@
 								<span><span>+</span>Show More</span>
 							</div>
 						</div>
-						<div class="sidebar_section-2 menu_item has-children">
-							<div class="sidebar_title">
-								<h5>Sizes</h5>
-							</div>
-							<ul class="checkboxes menu_selection">
-								<li>
-									<input type="checkbox" /><span style="margin-left:10px">M</span>
-								</li>
-								<li>
-									<input type="checkbox" /><span style="margin-left:10px">L</span>
-								</li>
-								<li>
-									<input type="checkbox" /><span style="margin-left:10px">XL</span>
-								</li>
-							</ul>
-						</div>
-
 						<!-- Color -->
 						<div class="sidebar_section sidebar_section-1">
 							<div class="sidebar_title">
 								<h5>Color</h5>
 							</div>
 							<ul class="checkboxes">								
-								<li>
+								<li >
 									<input type="checkbox" /><span style="margin-left:10px">Đen</span>
 								</li>
 								<li>
@@ -424,25 +392,6 @@
                             <div class="show_more">
                                 <span><span>+</span>Hiển thị</span>
                             </div>
-						</div>
-						<div class="sidebar_section-2 menu_item has-children">
-							<div class="sidebar_title">
-								<h5>Color</h5> 
-							</div>
-							<ul class="checkboxes menu_selection">
-								<li>
-									<input type="checkbox" /><span style="margin-left:10px">Đen</span>
-								</li>
-								<li>
-									<input type="checkbox" /><span style="margin-left:10px">Trắng</span>
-								</li>
-								<li>
-									<input type="checkbox" /><span style="margin-left:10px">Xanh Than</span>
-								</li>
-                            </ul>
-                            <div class="show_more">
-                                <span><span>+</span>Show More</span>
-                            </div>
 						</div> 
 					</div>
 					<div class="main_content">
@@ -451,7 +400,53 @@
 								<div class="col">
 									<div class="product_sorting_container product_sorting_container_top">
 										<ul class="product_sorting">
-											<li>
+											
+                                            <li class="sidebar_section-box2">
+                                                <span>Mức Giá </span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <ul>
+                                                    <div class="sidebar_section" style="margin-bottom:0;">
+                                                        <p class="">
+                                                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                                            <input type="hidden" id="ToAmount" />
+                                                            <input type="hidden" id="FromAmount" />
+                                                        </p>
+                                                        <div id="slider-range"></div>
+                                                        <div class="filter_button"><span>Chọn</span></div>
+                                                    </div>
+                                                </ul>
+                                            </li>
+											<li class="sidebar_section-box1">
+												<span>Size</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <ul class="sorting_num">
+													<li style="display: flex;">
+														<input type="checkbox" /><p style="margin-left:10px">M</p>
+													</li>
+													<li style="display: flex;">
+														<input type="checkbox" /><p style="margin-left:10px">L</p>
+													</li>
+													<li style="display: flex;">
+														<input type="checkbox" /><p style="margin-left:10px">XL</p>
+													</li>
+                                                </ul>
+											</li>
+											<li class="sidebar_section-box1">
+												<span>Color</span>
+												<i class="fa fa-angle-down"></i>
+												<ul class="sorting_num">
+													<li style="display: flex;">
+														<input type="checkbox" /><p style="margin-left:10px">Đen</p>
+													</li>
+													<li style="display: flex;">
+														<input type="checkbox" /><p style="margin-left:10px">Trắng</p>
+													</li>
+													<li style="display: flex;">
+														<input type="checkbox" /><p style="margin-left:10px">Xanh Than</p>
+													</li>
+												</ul>
+											</li>
+											<li class="type_sorting_text_box">
 												<span class="type_sorting_text">Lọc Sản Phẩm</span>
 												<i class="fa fa-angle-down"></i>
 												<ul class="sorting_type">
@@ -460,7 +455,7 @@
 													<li class="type_sorting_btn" data-isotope-option='{ "sortBy": "name" }'><span>Tên Sản Phẩm</span></li>
 												</ul>
 											</li>
-											<li>
+											<li class="show-box">
 												<span>Hiển Thị</span>
 												<span class="num_sorting_text">6</span>
 												<i class="fa fa-angle-down"></i>
