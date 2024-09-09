@@ -791,6 +791,12 @@
 }
 
 @media only screen and (max-width: 620px) {
+
+	.address-customer .box-customer {
+		padding: 0;
+		display: -webkit-box;
+		overflow:scroll;
+	}
 	.product_slider_container{
 		margin-top:30px;
 	}
@@ -1149,6 +1155,7 @@
 
 		.navbar {
 			height: 70px;
+			margin-right: 15px;
 		}
 
 		.navbar_user li a {
