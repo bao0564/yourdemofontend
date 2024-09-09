@@ -310,57 +310,58 @@
 		</div>
     </div>
     <!--  -->    
-    <main class="mar150_container cart" style="margin-bottom:150px" > 
-        <div class="body-cart">
-            <div class="address-cart">
-                <div class="box-cart" style="background-color:#000;color:#fff">
-                    <div class="flct" style="display:flex;justify-content:space-between">
-                        <div>
-                            <h3 style="color:#fff">Thông Tin Địa Chỉ </h3>
-                            <div style="color:#fff">vui lòng điền thông tin địa chỉ cần giao hàng của bạn</div>
-                        </div>
-                        <div>
-                            <a onclick="openAD()"><i onclick="openAD()" class="fa-solid fa-plus fa-lg" style="color: #fff;"></i></a>
-                        </div>
+    
+<main class="mar150_container cart" style="margin-bottom:150px" > 
+    <div class="body-cart">
+        <div class="address-cart">
+            <div class="box-cart box-cart-address" style="background-color:#000;color:#fff">
+                <div class="flct" style="justify-content:space-between">
+                    <div class="title">
+                        <h3 style="color:#fff">Thông Tin Địa Chỉ </h3>
                     </div>
-                    <div id="form-address" class="form-address">
+                    <div>
+                        <a onclick="openAD()"><i onclick="openAD()" class="fa-solid fa-plus fa-lg" style="color: #fff;"></i></a>
                     </div>
-                    <div class="box-cart" style="background-color:#fff">
-                        <div class="box-cart" style="background-color:#fff">
-                            <div class="space-address">
-                                <div class="box-address"><input type="text" name="TenKh" id="TenKh" placeholder="Tên người nhận" required /></div>
-                                <div class="box-address"><input type="text" name="Sdt" id="Sdt" placeholder="SDT người nhận" required /></div>
+                </div>
+                <div id="form-address" class="form-address">
+                    @* push here *@
+                </div>
+                <div class="box-cart" style="background-color:#fff">
+                    <div class="" style="background-color:#fff">
+                        <div class="space-address">
+                            <div class="box-address"><input type="text" name="TenKh" id="TenKh" placeholder="Tên người nhận" required /></div>
+                            <div class="box-address"><input type="text" name="Sdt" id="Sdt" placeholder="SDT người nhận" required /></div>
+                        </div>
+                        <div class="space-address">
+                            <div class="box-address">
+                                <input type="text" name="City" id="City" placeholder="City ...">
                             </div>
-                            <div class="space-address">
-                                <div class="box-address">
-                                    <input type="text" name="City" id="City" placeholder="Thành Phố...">
-                                </div>
-                                <div class="box-address">
-                                    <input type="text" name="District" id="District" placeholder="Quận/Huyện...">
-                                </div>
-                                <div class="box-address">
-                                    <input type="text" name="Ward" id="Ward" placeholder="Phường/Xã...">
-                                </div>
+                            <div class="box-address">
+                                <input type="text" name="District" id="District" placeholder="District ...">
                             </div>
-                            <div class="space-address">
-                                <div class="box-address">
-                                    <input type="text" name="DiaChi" id="DiaChi" placeholder="Địa chỉ chi tiết" />
-                                </div>
+                            <div class="box-address">
+                                <input type="text" name="Ward" id="Ward" placeholder="Ward ...">
                             </div>
-                            <div class="space-address">
-                                <div class="box-address">
-                                    <input type="text" name="GhiChu" id="GhiChu" placeholder="Ghi chú cho đơn hàng" />
-                                </div>
+                        </div>
+                        <div class="space-address">
+                            <div class="box-address">
+                                <input type="text" name="DiaChi" id="DiaChi" placeholder="Địa chỉ chi tiết" />
+                            </div>
+                        </div>
+                        <div class="space-address">
+                            <div class="box-address">
+                                <input type="text" name="GhiChu" id="GhiChu" placeholder="Ghi chú cho đơn hàng" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="box-cart" style="background-color:#000;">
+            </div>
+            <div class="box-cart-pay-voucher">
+                <div class="box-cart box-cart-pay" style="background-color:#000;">
                     <div>
                         <h3 style="color:#fff">Hình Thức Thanh Toán  </h3>
-                        <div style="color:#fff">vui lòng chọn hình thức thanh toán mong muốn của bạn</div>
                     </div>
-                    <div class="box-cart" style="background-color:#fff">
+                    <div class="box-cart pay-list" style="background-color:#fff">
                         <div class="space-pay">
                             <div class="box-pay">
                                 <div class="pay-title">
@@ -400,171 +401,199 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="box-cart box-cart-voucher" style="background-color:#000;">
+                    <div>
+                        <h3 style="color:#fff">Voucher</h3>
+                    </div>
+                    <div class="box-cart voucher-list" style="background-color:#fff">
                         <div class="space-pay">
-                            <div class="box-pay">
-                                <div class="pay-title">
+                            <div class="box-cart" style="flex-grow:1">
+                                <div class="cart-container flct">
                                     <span class="check-box">
                                         <input type="checkbox" />
                                     </span>
-                                    <div class="icon">
-                                        <img src="/icon/vnpay.jpg" alt="">
+                                    <div class="box-img flct">
+                                        <img src="images/desc_1.jpg" alt="Product Image" />
                                     </div>
-                                    <div class="title">Thanh toán bằng VNPay</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="order-cart box-cart" style="background-color:#fff;margin:20px 0">
-                <div>
-                    <div class="title">
-                        <h3 style="border-bottom:1px solid">Giỏ Hàng </h3>
-                    </div>
-                    <div id="List-prd-cart">
-                        <div class="box-cart" id="sp-@prd.ProductId">
-                            <div class="cart-container flex-cart">
-                                <div class="check-box">
-                                    <input type="checkbox" class="cart-checkbox" data-id="@prd.ProductId" data-price="@prd.ProductPrice" data-total="@prd.Total" data-sizeid="@prd.SizeId" data-colorid="@prd.ColorId"/>
-                                </div>
-                                <div class="flex-cart">
-                                    <div class="box-img" style="display:flex; align-items:center">
-                                        <img src="img/04b29343-db7d-4532-97a7-d9ab4f424167.png" alt="Product Image" />
-                                    </div>
-                                    <div class="cart-infor">
-                                        <div class="infor-colum">
-                                            <p class="cart-name"style="color:#000">Tên sản phẩm</p>
-                                            <div class="flex-cart" style="max-width:150px">
-                                                <div class="flct"style="white-space:nowrap">Phân Loại:
-                                                    <div class="bdrdu" style="padding:5px 10px;margin:0 10px">Đen</div>
-                                                    <div class="bdrdu" style="padding:5px 10px;margin:0 10px">S</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-cart infor-colum">
-                                            <div class="flct product_price" data-price="@prd.ProductPrice">
-                                                192.000 VNĐ
-                                            </div>
-                                            <div>
-                                                <div class="quantity_selector_cart">
-                                                    <span class="minus-cart" data-id="@prd.ProductId"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                    <span class="quantity_value-cart" id="quantity_@prd.ProductId">1</span>
-                                                    <span class="plus-cart" data-id="@prd.ProductId"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="check-box">
-                                    <div>
-                                        <input type="button" class="deletebtn" value="xóa" asp-controller="shoppingcart" data-id="@prd.ProductId" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="box-cart" id="sp-@prd.ProductId">
-                            <div class="cart-container flex-cart">
-                                <div class="check-box">
-                                    <input type="checkbox" class="cart-checkbox" data-id="@prd.ProductId" data-price="@prd.ProductPrice" data-total="@prd.Total" data-sizeid="@prd.SizeId" data-colorid="@prd.ColorId"/>
-                                </div>
-                                <div class="flex-cart">
-                                    <div class="box-img" style="display:flex; align-items:center">
-                                        <img src="img/920e1e3f-830b-4382-9667-bd28164d2b79.png" alt="Product Image" />
-                                    </div>
-                                    <div class="cart-infor">
-                                        <div class="infor-colum">
-                                            <p class="cart-name"style="color:#000">Tên sản phẩm</p>
-                                            <div class="flex-cart" style="max-width:150px">
-                                                <div class="flct"style="white-space:nowrap">Phân Loại:
-                                                    <div class="bdrdu" style="padding:5px 10px;margin:0 10px">Xanh Than</div>
-                                                    <div class="bdrdu" style="padding:5px 10px;margin:0 10px">S</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-cart infor-colum">
-                                            <div class="flct product_price" data-price="@prd.ProductPrice">
-                                                192.000 VNĐ
-                                            </div>
-                                            <div>
-                                                <div class="quantity_selector_cart">
-                                                    <span class="minus-cart" data-id="@prd.ProductId"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                    <span class="quantity_value-cart" id="quantity_@prd.ProductId">1</span>
-                                                    <span class="plus-cart" data-id="@prd.ProductId"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="check-box">
-                                    <div>
-                                        <input type="button" class="deletebtn" value="xóa" asp-controller="shoppingcart" data-id="@prd.ProductId" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                                       
-                    </div>
-                </div>
-            </div>
-            <div id="form-yc-login" class="form-login">
-                <div class="fa-login" id="fa-login" style="z-index:10">
-                    <div class="creen-login">
-                        <div class="box-login box" style="width:700px">
-                            <span class="close-login" onclick="ClLable()">✕</span>
-                            <div class="login-left" style="background-color:#2f3640;border-radius:10px">
-                                <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-                                    <form action="" id="dangnhap">
-                                        <div class="title">
-                                            <p class="login">Đăng Nhập</p>
-                                        </div>
-                                        <div class="sm-title" style="color:#fff">
-                                            Bạn chưa đăng nhập, hãy đăng nhập tại đây!
-                                        </div>
-                                        <div class="btn-swich btn">
-                                            <a href="@Url.Action("Login","Access")" style="display:flex;align-items:center;background-color:#000;border-radius:5px"><p>Đăng Nhập</p></a>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="login-right">
-                                <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-                                    <img src="/logo/login.png" alt="" />
-                                    <div class="sm-title">
-                                        Bạn chưa có tài khoản.Hãy tạo ở đây!
-                                    </div>
-                                    <div class="btn-swich btn">
-                                        <a href="@Url.Action("Register","Access")" style="display:flex;align-items:center;background-color:#000;border-radius:5px"><p>Đăng Ký Tài Khoản</p></a>
+                                    <div style="margin-left:10px">
+                                        <div>Giảm 25%</div>
+                                        <div>Giảm Tối đa 50.000 VNĐ </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-pay-all">
-                <div class="box-cart">
-                    <div style="display:flex;align-items:center;height:50px">
-                        <div class="" style="display:flex;width:50%">
-                            <div class="infor-payment">phương thức thanh toán</div>
-                            <div class="infor-payment">voucher</div>
-                        </div>
-                        <div style="display:flex;width:50%;justify-content:flex-end">
-                            <div class=" flex2-cart" style="flex-direction: column">
-                                <div>
-                                
+                        <div class="space-pay">
+                            <div class="box-cart" style="flex-grow:1">
+                                <div class="cart-container flct">
+                                    <span class="check-box">
+                                        <input type="checkbox" />
+                                    </span>
+                                    <div class="box-img flct">
+                                        <img src="images/desc_1.jpg" alt="Product Image" />
+                                    </div>
+                                    <div style="margin-left:10px">
+                                        <div>Giảm 25%</div>
+                                        <div>Giảm Tối đa 50.000 VNĐ </div>
+                                    </div>
                                 </div>
-                                <div class="flex-cart title total-price-container">
-                                    Thành Tiền: <div class="flct product_price" style="color:#fff;margin:0 10px" id="TongTien"></div>
-                                </div>
-                            </div>
-                            <div style="width:30%">
-                                <button id="pay-btn-none" class="pay-btn-none" onclick="OpLable()"><a href="order.html">Đặt Hàng</a></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main> 
+        <div class="order-cart box-cart" style="background-color:#fff;margin:20px 0">
+            <div>
+                <div class="title">
+                    <h3 style="border-bottom:1px solid">Giỏ Hàng </h3>
+                </div>
+                <div id="List-prd-cart">
+                    <div class="box-cart" id="sp-@prd.ProductId">
+                        <div class="cart-container flex-cart">
+                            <div class="check-box">
+                                <input type="checkbox" class="cart-checkbox" data-id="@prd.ProductId" data-price="@prd.ProductPrice" data-total="@prd.Total" data-sizeid="@prd.SizeId" data-colorid="@prd.ColorId"/>
+                            </div>
+                            <div class="flex-cart">
+                                <div class="box-img" style="display:flex; align-items:center">
+                                    <img src="img/0a1bae45-ee60-4f79-95c2-e2c887ddac6e.png" alt="Product Image" />
+                                </div>
+                                <div class="cart-infor">
+                                    <div class="infor-colum">
+                                        <p class="cart-name"style="color:#000">Sản Phẩm quần áo</p>
+                                        <div class="flex-cart">
+                                            <div class="flct"style="white-space:nowrap">Phân Loại:
+                                                <div class="bdrdu">Xanh Lam</div>
+                                                <div class="bdrdu">Đen</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-cart infor-colum">
+                                        <div class="flct product_price" data-price="@prd.ProductPrice">
+                                            200.000 VND
+                                        </div>
+                                        <div>
+                                            <div class="quantity_selector_cart">
+                                                <span class="minus-cart" data-id="@prd.ProductId"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                <span class="quantity_value-cart" id="quantity_@prd.ProductId">1</span>
+                                                <span class="plus-cart" data-id="@prd.ProductId"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-box">
+                                <div>
+                                    <input type="button" class="deletebtn" value="xóa" asp-controller="shoppingcart" data-id="@prd.ProductId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-cart" id="sp-@prd.ProductId">
+                        <div class="cart-container flex-cart">
+                            <div class="check-box">
+                                <input type="checkbox" class="cart-checkbox" data-id="@prd.ProductId" data-price="@prd.ProductPrice" data-total="@prd.Total" data-sizeid="@prd.SizeId" data-colorid="@prd.ColorId"/>
+                            </div>
+                            <div class="flex-cart">
+                                <div class="box-img" style="display:flex; align-items:center">
+                                    <img src="img/50b8346e-e3b3-4f6c-98bb-71d9ee771842.png" alt="Product Image" />
+                                </div>
+                                <div class="cart-infor">
+                                    <div class="infor-colum">
+                                        <p class="cart-name"style="color:#000">Sản Phẩm quần áo</p>
+                                        <div class="flex-cart">
+                                            <div class="flct"style="white-space:nowrap">Phân Loại:
+                                                <div class="bdrdu">Xanh Lam</div>
+                                                <div class="bdrdu">Đen</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-cart infor-colum">
+                                        <div class="flct product_price" data-price="@prd.ProductPrice">
+                                            250.000 VND
+                                        </div>
+                                        <div>
+                                            <div class="quantity_selector_cart">
+                                                <span class="minus-cart" data-id="@prd.ProductId"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                <span class="quantity_value-cart" id="quantity_@prd.ProductId">1</span>
+                                                <span class="plus-cart" data-id="@prd.ProductId"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-box">
+                                <div>
+                                    <input type="button" class="deletebtn" value="xóa" asp-controller="shoppingcart" data-id="@prd.ProductId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form-yc-login" class="form-login">
+            <div class="fa-login" id="fa-login" style="z-index:10">
+                <div class="creen-login">
+                    <div class="box-login box" style="width:700px">
+                        <span class="close-login" onclick="ClLable()">✕</span>
+                        <div class="login-left" style="background-color:#2f3640;border-radius:10px">
+                            <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                                <form action="" id="dangnhap">
+                                    <div class="title">
+                                        <p class="login">Đăng Nhập</p>
+                                    </div>
+                                    <div class="sm-title" style="color:#fff">
+                                        Bạn chưa đăng nhập, hãy đăng nhập tại đây!
+                                    </div>
+                                    <div class="btn-swich btn">
+                                        <a href="#" style="display:flex;align-items:center;background-color:#000;border-radius:5px"><p>Đăng Nhập</p></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="login-right">
+                            <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                                <img src="logo/login.png" alt="" />
+                                <div class="sm-title">
+                                    Bạn chưa có tài khoản.Hãy tạo ở đây!
+                                </div>
+                                <div class="btn-swich btn">
+                                    <a href="#" style="display:flex;align-items:center;background-color:#000;border-radius:5px"><p>Đăng Ký Tài Khoản</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-pay-all all-choose">
+            <div class="box-cart">
+                <div class="flct" style="height:50px">
+                    <div class="tipe-choose">
+                        <div class="infor-payment">phương thức thanh toán</div>
+                        <div class="infor-payment">voucher</div>
+                    </div>
+                    <div class="price-choose" style="justify-content:flex-end">
+                        <div class="fljct" style="flex-direction: column">
+                            <div>
+                               
+                            </div>
+                            <div class="flex-cart title total-price-container">
+                                Tổng: <div class="flct product_price" style="color:#fff;margin:0 10px" id="TongTien"></div>
+                            </div>
+                        </div>
+                        <div style="">
+                                <button id="pay-btn-none" class="pay-btn-none" onclick="OpLable()">Đặt Hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main> 
+
     <style>
         .footer{
             display:none;
@@ -573,6 +602,23 @@
             background-color:#2f3640;
         }
     </style>
+    <script>
+        function OpLable(){
+            document.getElementById("form-yc-login").style.display = "block";
+            document.getElementById("form-register").style.display = "none";
+        }
+        function ClLable() {
+            document.getElementById("form-yc-login").style.display = "none";
+        }
+        //đóng mở form chọn địa chỉ
+        function openAD() {
+            document.getElementById("form-address").style.display = "block";
+        }
+        function closeAD() {
+            document.getElementById("form-address").style.display = "none";
+        }
+    </script>
+<script src="js/addtocart.js"></script>
     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="row">
