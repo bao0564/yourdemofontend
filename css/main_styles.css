@@ -63,6 +63,9 @@ COLOR PALETTE
 	overflow-y:hidden;
 	overflow-x:auto;
 }
+.flscr::-webkit-scrollbar {
+	display: none;
+}
 .cart-infor .bdrdu {
 	padding: 5px 10px;
 	margin:0 10px;
@@ -1557,6 +1560,10 @@ section
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+}
+.prd-grid::-webkit-scrollbar {
+	display: none;
 }
 .btn-primary-prev {
 	position: absolute;

@@ -182,10 +182,13 @@
 		overflow-y: hidden;
 		overflow-x: auto;
 	}
-	.sidebar_section-2 .lst-cate li{
-		border:1px solid #2f3640;
-		border-radius:10px;
-		margin:0 10px;
+	.sidebar_section-2::-webkit-scrollbar{
+		display:none;
+	}
+	.sidebar_section-2 .lst-cate li {
+		border: 1px solid #2f3640;
+		border-radius: 10px;
+		margin: 0 10px;
 	}
 	.sidebar_section-2 .lst-cate li a{
 		padding:5px 20px;
