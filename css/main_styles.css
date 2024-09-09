@@ -58,6 +58,11 @@ COLOR PALETTE
 	display: flex;
 	justify-content:center;
 }
+.flscr{
+	display:-webkit-flex;
+	overflow-y:hidden;
+	overflow-x:auto;
+}
 .cart-infor .bdrdu {
 	padding: 5px 10px;
 	margin:0 10px;
@@ -1662,19 +1667,27 @@ section
 	transition: opacity 0.5s ease, visibility 0.5s ease;
 	background: linear-gradient(0deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), hsla(0, 0%, 100%, .4)
 }
-
+.box-inf-cl-s .box-inf-title {
+	padding: 10px
+}
+.box-inf-cl-s .box-inf-size {
+	margin-bottom: 10px
+}
+.box-inf-cl-s.box-inf-color {
+}
 .box-inf-cl-s:hover {
 }
 
 .box-inf-cl-s button {
-	border:none;
+	border: none;
 	text-align: center;
 	background-color: #fff;
 	border-radius: 10px;
-	box-shadow: 10px #000;
+	border:0.5px solid #fff;
 	padding: 5px 10px;
-	margin:4px;
-	min-width:40px;
+	margin: 4px;
+	min-width: 40px;
+	min-height: 10px;
 }
 
 .box-inf-cl-s button .icon {
