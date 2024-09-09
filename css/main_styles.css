@@ -1549,7 +1549,7 @@ section
 *********************************/
 
 .prd-grid {
-	overflow: hidden;
+	overflow: scroll;
 	position: relative;
 	width: 99%;
 	margin: 10px 0 0;
