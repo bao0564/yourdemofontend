@@ -793,7 +793,8 @@ COLOR PALETTE
 	font-weight: 400;
 	color: #b9b4c7 !important;
 }
-#newsletter_email::-moz-placeholder Firefox {
+#newsletter_email::-moz-placeholder  Firefox 
+{
 	font-size: 14px !important;
 	font-weight: 400;
 	color: #b9b4c7 !important;
@@ -840,22 +841,24 @@ COLOR PALETTE
 .pagination li {
 	border: 1px solid;
 	margin: 0 5px;
-	padding:5px 10px;
 }
 /*product form page*/
-/*
-.product-grid {
+/**/
+.cate .product-grid {
 	width: 100%;
 	margin-top: 57px;
 }
 
-.product-item {
+.cate .product-item {
 	width: 20%;
-	height: 380px;
+	height: auto;
 	cursor: pointer;
 }
-
-.product-item::after {
+.cate .product_image img {
+	width: 100%;
+	position: relative;
+}
+/*.product-item::after {
 	display: block;
 	position: absolute;
 	top: 0;
